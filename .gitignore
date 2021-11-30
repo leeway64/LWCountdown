@@ -29,4 +29,8 @@
 # Executables
 *.exe
 *.out
+out/
 *.app
+
+# Visual Studio
+.vs/
