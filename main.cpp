@@ -5,22 +5,30 @@
 
 
 int main(int argc, char** argv) {
-    std::ifstream input("list_of_timers.json");
+    std::string timers_file_name = "list_of_timers.json";
+    std::filesystem::path timers_file{ timers_file_name };
+    if (!std::filesystem::exists(timers_file))
+    {
+        std::ofstream output(timers_file_name);
+        output.close();
+    }        
+
+    std::ifstream input(timers_file_name);
     nlohmann::json timers;
     input >> timers;
     input.close();
 
     CLI::App app{ "LWCountdown" };
 
-    // Create/update a countdown
+    // Create/update a timer
     std::string c = "";
     app.add_option("-c", c, "Parameter");
 
-    // View a countdown
+    // View a timer
     std::string v = "";
     app.add_option("-v", v, "Parameter");
 
-    // Delete a countdown
+    // Delete a timer
     std::string d = "";
     app.add_option("-d", d, "Parameter");
     
@@ -29,6 +37,12 @@ int main(int argc, char** argv) {
     }
     catch (const CLI::ParseError& e) {
         return app.exit(e);
+    }
+
+    if (c != "")
+    {
+        std::cout << "Name of timer: " << c << std::endl;
+        std::cout << "End time: ";
     }
 
     if (v != "")
@@ -40,7 +54,7 @@ int main(int argc, char** argv) {
         else
         {
             std::cout << timers[v] << std::endl;
-            std::cout << "  Time remaining: random time" << std::endl;
+            std::cout << "    Time remaining: random time" << std::endl;
         }
     }
 
@@ -57,6 +71,10 @@ int main(int argc, char** argv) {
             std::cout << "Timer " << timer_name << " has been deleted" << std::endl;
         }
     }
+
+    std::ofstream output(timers_file_name);
+    output << std::setw(4) << timers << std::endl;
+    output.close();
 
     return 0;
 }
