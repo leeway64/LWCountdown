@@ -1,8 +1,15 @@
 #include "CLI11.hpp"
+#include "json.hpp"
+
 #include <iostream>
 
 
 int main(int argc, char** argv) {
+    std::ifstream input("list_of_timers.json");
+    nlohmann::json timers;
+    input >> timers;
+    input.close();
+
     CLI::App app{ "LWCountdown" };
 
     // Create/update a countdown
@@ -24,9 +31,32 @@ int main(int argc, char** argv) {
         return app.exit(e);
     }
 
-    std::cout << "Parameter value: " << c << std::endl;
-    std::cout << "Parameter value: " << v << std::endl;
-    std::cout << "Parameter value: " << d << std::endl;
+    if (v != "")
+    {
+        if (timers[v] == nullptr)
+        {
+            std::cout << "Timer not found" << std::endl;
+        }
+        else
+        {
+            std::cout << timers[v] << std::endl;
+            std::cout << "  Time remaining: random time" << std::endl;
+        }
+    }
+
+    if (d != "")
+    {
+        if (timers[d] == nullptr)
+        {
+            std::cout << "Timer not found" << std::endl;
+        }
+        else
+        {            
+            auto timer_name = timers[d];
+            timers.erase(d);
+            std::cout << "Timer " << timer_name << " has been deleted" << std::endl;
+        }
+    }
 
     return 0;
 }
