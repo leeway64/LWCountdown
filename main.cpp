@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
         std::cin >> end_time;
         timers[c] = end_time;
 
-        std::cout << "    Time remaining: " << std::endl;
+        std::cout << "    Time remaining: ";
         time_functions::get_time_remaining_in_timer(end_time);
     }
 
@@ -57,31 +57,32 @@ int main(int argc, char** argv) {
     {
         if (timers[v] == nullptr)
         {
-            std::cout << "Timer not found" << std::endl;
+            std::cout << "Timer \"" << v << "\" not found" << std::endl;;
         }
         else
         {
             std::cout << "Timer selected: " << v << std::endl;
             std::cout << "    Time remaining: current time - " << timers[v] << std::endl;
-            //time_functions::get_time_remaining();
+            //time_functions::get_time_remaining_in_timer(end_time);
         }
     }
 
     if (view_all)
     {
-        time_functions::get_all_time_remaining();
         std::cout << "view all " << std::endl;
+        time_functions::get_all_time_remaining();
     }
 
     if (d != "")
     {
+        std::cout << "Timer \"" << d << "\" ";
         if (timers[d] == nullptr)
         {
-            std::cout << "Timer not found" << std::endl;
+            std::cout << "not found" << std::endl;
         }
         else
         {            
-            std::cout << "Timer \"" << d << "\" has been deleted" << std::endl;
+            std::cout << "has been deleted" << std::endl;
         }
         timers.erase(d);
     }
