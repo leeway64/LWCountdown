@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX20_STANDARD_COMPILE_OPTION "-std:c++latest")
 set(CMAKE_CXX20_EXTENSION_COMPILE_OPTION "-std:c++latest")
 
-add_executable (LWCountdown "main.cpp" "CLI11.hpp" "json.hpp")
+add_executable (LWCountdown "main.cpp" "CLI11.hpp" "json.hpp" "time_functions.hpp")

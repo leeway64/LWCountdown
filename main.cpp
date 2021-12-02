@@ -1,5 +1,6 @@
 #include "CLI11.hpp"
 #include "json.hpp"
+#include "time_functions.hpp"
 
 #include <iostream>
 
@@ -20,17 +21,17 @@ int main(int argc, char** argv) {
 
     CLI::App app{ "LWCountdown" };
 
-    // Create/update a timer
     std::string c = "";
-    app.add_option("-c", c, "Parameter");
+    app.add_option("-c", c, "Create/update a timer");
 
-    // View a timer
     std::string v = "";
-    app.add_option("-v", v, "Parameter");
+    app.add_option("-v", v, "View a timer");
 
-    // Delete a timer
+    bool view_all{false};
+    app.add_flag("-a", view_all, "View all timers");
+
     std::string d = "";
-    app.add_option("-d", d, "Parameter");
+    app.add_option("-d", d, "Delete a timer");
     
     try {
         app.parse(argc, argv);
@@ -39,10 +40,15 @@ int main(int argc, char** argv) {
         return app.exit(e);
     }
 
+
     if (c != "")
     {
+        std::string end_time{};
         std::cout << "Name of timer: " << c << std::endl;
-        std::cout << "End time: ";
+        std::cout << "    End time: ";
+        std::cin >> end_time;
+        timers[c] = end_time;
+        time_functions::get_timer();
     }
 
     if (v != "")
@@ -53,9 +59,16 @@ int main(int argc, char** argv) {
         }
         else
         {
-            std::cout << timers[v] << std::endl;
-            std::cout << "    Time remaining: random time" << std::endl;
+            std::cout << "Timer selected: " << v << std::endl;
+            std::cout << "    Time remaining: current time - " << timers[v] << std::endl;
+            time_functions::get_timer();
         }
+    }
+
+    if (view_all)
+    {
+        time_functions::get_all_timers();
+        std::cout << "view all " << std::endl;
     }
 
     if (d != "")
@@ -66,10 +79,9 @@ int main(int argc, char** argv) {
         }
         else
         {            
-            auto timer_name = timers[d];
-            timers.erase(d);
-            std::cout << "Timer " << timer_name << " has been deleted" << std::endl;
+            std::cout << "Timer \"" << d << "\" has been deleted" << std::endl;
         }
+        timers.erase(d);
     }
 
     std::ofstream output(timers_file_name);
