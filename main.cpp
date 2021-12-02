@@ -48,7 +48,9 @@ int main(int argc, char** argv) {
         std::cout << "    End time: ";
         std::cin >> end_time;
         timers[c] = end_time;
-        time_functions::get_timer();
+
+        std::cout << "    Time remaining: " << std::endl;
+        time_functions::get_time_remaining_in_timer(end_time);
     }
 
     if (v != "")
@@ -61,13 +63,13 @@ int main(int argc, char** argv) {
         {
             std::cout << "Timer selected: " << v << std::endl;
             std::cout << "    Time remaining: current time - " << timers[v] << std::endl;
-            time_functions::get_timer();
+            //time_functions::get_time_remaining();
         }
     }
 
     if (view_all)
     {
-        time_functions::get_all_timers();
+        time_functions::get_all_time_remaining();
         std::cout << "view all " << std::endl;
     }
 
