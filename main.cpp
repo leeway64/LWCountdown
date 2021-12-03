@@ -6,8 +6,9 @@
 
 
 int main(int argc, char** argv) {
-    std::string timers_file_name = "list_of_timers.json";
-    std::filesystem::path timers_file{ timers_file_name };
+    const std::string timers_file_name = "list_of_timers.json";
+
+    const std::filesystem::path timers_file{ timers_file_name };
     if (!std::filesystem::exists(timers_file))
     {
         std::ofstream output(timers_file_name);
@@ -21,17 +22,17 @@ int main(int argc, char** argv) {
 
     CLI::App app{ "LWCountdown" };
 
-    std::string c = "";
-    app.add_option("-c", c, "Create/update a timer");
+    std::string create = "";
+    app.add_option("-c", create, "Create/update a timer");
 
-    std::string v = "";
-    app.add_option("-v", v, "View a timer");
+    std::string view = "";
+    app.add_option("-v", view, "View a timer");
 
     bool view_all{false};
     app.add_flag("-a", view_all, "View all timers");
 
-    std::string d = "";
-    app.add_option("-d", d, "Delete a timer");
+    std::string delete_timer = "";
+    app.add_option("-d", delete_timer, "Delete a timer");
     
     try {
         app.parse(argc, argv);
@@ -41,42 +42,44 @@ int main(int argc, char** argv) {
     }
 
 
-    if (c != "")
+    if (create != "")
     {
         std::string end_time{};
-        std::cout << "Name of timer: " << c << std::endl;
+        std::cout << "Name of timer: " << create << std::endl;
         std::cout << "    End time: ";
         std::cin >> end_time;
-        timers[c] = end_time;
+        timers[create] = end_time;
 
-        std::cout << "    Time remaining: ";
-        time_functions::get_time_remaining_in_timer(end_time);
+        std::cout << "    Time remaining: " <<
+            time_functions::get_time_remaining_in_timer(end_time) << " days" << std::endl;
     }
 
-    if (v != "")
+    if (view != "")
     {
-        if (timers[v] == nullptr)
+        const auto end_time = timers[view];
+        if (end_time == nullptr)
         {
-            std::cout << "Timer \"" << v << "\" not found" << std::endl;;
+            std::cout << "Timer \"" << view << "\" not found" << std::endl;
+            timers.erase(view);
         }
         else
         {
-            std::cout << "Timer selected: " << v << std::endl;
-            std::cout << "    Time remaining: current time - " << timers[v] << std::endl;
-            //time_functions::get_time_remaining_in_timer(end_time);
+            std::cout << "Timer selected: " << view << std::endl;
+            std::cout << "    Time remaining: " <<
+                time_functions::get_time_remaining_in_timer(end_time) << " days" << std::endl;
         }
     }
 
     if (view_all)
     {
-        std::cout << "view all " << std::endl;
+        std::cout << "All timers" << std::endl;
         time_functions::get_all_time_remaining();
     }
 
-    if (d != "")
+    if (delete_timer != "")
     {
-        std::cout << "Timer \"" << d << "\" ";
-        if (timers[d] == nullptr)
+        std::cout << "Timer \"" << delete_timer << "\" ";
+        if (timers[delete_timer] == nullptr)
         {
             std::cout << "not found" << std::endl;
         }
@@ -84,7 +87,7 @@ int main(int argc, char** argv) {
         {            
             std::cout << "has been deleted" << std::endl;
         }
-        timers.erase(d);
+        timers.erase(delete_timer);
     }
 
     std::ofstream output(timers_file_name);
