@@ -2,6 +2,7 @@
 #include "json.hpp"
 #include "time_functions.hpp"
 
+#include <regex>
 #include <iostream>
 
 
@@ -12,6 +13,7 @@ int main(int argc, char** argv) {
     if (!std::filesystem::exists(timers_file))
     {
         std::ofstream output(timers_file_name);
+        output << "{\n}\n";
         output.close();
     }        
 
@@ -46,12 +48,21 @@ int main(int argc, char** argv) {
     {
         std::string end_time{};
         std::cout << "Name of timer: " << create << std::endl;
-        std::cout << "    End time: ";
+        std::cout << "    End date: ";
         std::cin >> end_time;
-        timers[create] = end_time;
-
-        std::cout << "    Time remaining: " <<
+       
+        const std::regex re("[\\d]{4}-[\\d]{2}-[\\d]{2}|[\\d]{4}-[\\d]{1}-[\\d]{1}");
+        if (!std::regex_match(end_time, re))
+        {
+            std::cout << "\nIncorrect date format" << std::endl;
+            std::cout << "Date must be in the form of YYYY-MM-DD or YYYY-M-D" << std::endl;
+        }
+        else {
+            std::cout << "Timer \"" << create << "\" has been set" << std::endl;
+            timers[create] = end_time;
+            std::cout << "    Time remaining: " <<
             time_functions::get_time_remaining_in_timer(end_time) << " days" << std::endl;
+        }
     }
 
     if (view != "")
@@ -73,7 +84,7 @@ int main(int argc, char** argv) {
     if (view_all)
     {
         std::cout << "All timers" << std::endl;
-        time_functions::get_all_time_remaining();
+        time_functions::get_all_time_remaining(timers);
     }
 
     if (delete_timer != "")

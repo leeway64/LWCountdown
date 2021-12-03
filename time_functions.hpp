@@ -42,7 +42,10 @@ namespace time_functions
 	/* Get the time remaining in all timers.
 	@param
 	*/
-	void get_all_time_remaining()
+	void get_all_time_remaining(nlohmann::json timers)
 	{
+		for (auto& [key, value] : timers.items()) {
+			std::cout << key << " : " << value << "\n";
+		}
 	}
 }
