@@ -13,6 +13,7 @@ int main(int argc, char** argv) {
     if (!std::filesystem::exists(timers_file))
     {
         std::ofstream output(timers_file_name);
+        // Write brackets so that the file can be correctly read as a JSON file
         output << "{\n}\n";
         output.close();
     }        
@@ -60,15 +61,14 @@ int main(int argc, char** argv) {
         else {
             std::cout << "Timer \"" << create << "\" has been set" << std::endl;
             timers[create] = end_time;
-            std::cout << "    Time remaining: " <<
-            timer_helpers::get_time_remaining_in_timer(end_time) << " days" << std::endl;
+            timer_helpers::print_time_remaining(end_time);
         }
     }
 
     if (view != "")
     {
-        const auto end_time = timers[view];
-        if (end_time == nullptr)
+        const auto end_time_string = timers[view];
+        if (end_time_string == nullptr)
         {
             std::cout << "Timer \"" << view << "\" not found" << std::endl;
             timers.erase(view);
@@ -76,15 +76,18 @@ int main(int argc, char** argv) {
         else
         {
             std::cout << "Timer selected: " << view << std::endl;
-            std::cout << "    Time remaining: " <<
-                timer_helpers::get_time_remaining_in_timer(end_time) << " days" << std::endl;
+            timer_helpers::print_time_remaining(end_time_string);
         }
     }
 
     if (view_all)
     {
-        std::cout << "All timers" << std::endl;
-        timer_helpers::get_all_time_remaining(timers);
+        std::cout << "Showing all timers\n" << std::endl;
+        for (const auto& [name, end_time_string] : timers.items())
+        {
+            std::cout << name << std::endl;
+            timer_helpers::print_time_remaining(end_time_string);
+        }
     }
 
     if (delete_timer != "")
@@ -102,6 +105,7 @@ int main(int argc, char** argv) {
     }
 
     std::ofstream output(timers_file_name);
+    // Write the updated timers back to the JSON file
     output << std::setw(4) << timers << std::endl;
     output.close();
 

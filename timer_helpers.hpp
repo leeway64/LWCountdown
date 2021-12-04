@@ -2,9 +2,10 @@
 
 namespace timer_helpers
 {
-	/* Get the time remaining in a given timer. The time remaining is calculated by
-	@param end_time_string
-	@return The time remaining
+	/* Get the time remaining in a given timer. The time remaining is calculated by subtracting the
+	ending time by the current time.
+	@param end_time_string is the ending time in the format of YYYY-MM-DD.
+	@return The time remaining.
 	*/
 	int get_time_remaining_in_timer(const std::string& end_time_string)
 	{
@@ -39,13 +40,12 @@ namespace timer_helpers
 		return time_remaining.count();
 	}
 
-	/* Get the time remaining in all timers.
-	@param
+	/* Print the time remaining in a timer.
+	@param end_time_string is the ending time in the format of YYYY-MM-DD.
 	*/
-	void get_all_time_remaining(nlohmann::json timers)
+	void print_time_remaining(std::string end_time_string)
 	{
-		for (auto& [key, value] : timers.items()) {
-			std::cout << key << " : " << value << "\n";
-		}
+		std::cout << "    Time remaining: " <<
+			timer_helpers::get_time_remaining_in_timer(end_time_string) << " days" << std::endl;
 	}
 }
