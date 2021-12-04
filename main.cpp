@@ -1,5 +1,5 @@
-#include "CLI11.hpp"
-#include "json.hpp"
+#include <CLI/CLI.hpp>
+#include <nlohmann/json.hpp>
 #include "timer_helpers.hpp"
 
 #include <regex>
