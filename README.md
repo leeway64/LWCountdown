@@ -5,6 +5,9 @@ timers and display the time remaining.
 
 ## Installation
 
+The easiest way to get LWCountdown is to download the pre-built binary from the [releases]() page.
+
+Alternatively, you can clone this repository and build the binary on your own machine.
 
 
 ## Usage
@@ -12,6 +15,7 @@ timers and display the time remaining.
 The following is a brief example on how to use LWCountdown.
 
 ```C++
+
 ```
 
-For more information on using LWCountdown, refer to [the usage examples](docs/usage_examples.md).
+For more information on using LWCountdown, refer to [the usage examples](docs/usage.md).

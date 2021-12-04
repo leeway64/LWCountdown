@@ -1,6 +1,6 @@
 #include <chrono>
 
-namespace time_functions
+namespace timer_helpers
 {
 	/* Get the time remaining in a given timer. The time remaining is calculated by
 	@param end_time_string

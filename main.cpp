@@ -1,6 +1,6 @@
 #include "CLI11.hpp"
 #include "json.hpp"
-#include "time_functions.hpp"
+#include "timer_helpers.hpp"
 
 #include <regex>
 #include <iostream>
@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
             std::cout << "Timer \"" << create << "\" has been set" << std::endl;
             timers[create] = end_time;
             std::cout << "    Time remaining: " <<
-            time_functions::get_time_remaining_in_timer(end_time) << " days" << std::endl;
+            timer_helpers::get_time_remaining_in_timer(end_time) << " days" << std::endl;
         }
     }
 
@@ -77,14 +77,14 @@ int main(int argc, char** argv) {
         {
             std::cout << "Timer selected: " << view << std::endl;
             std::cout << "    Time remaining: " <<
-                time_functions::get_time_remaining_in_timer(end_time) << " days" << std::endl;
+                timer_helpers::get_time_remaining_in_timer(end_time) << " days" << std::endl;
         }
     }
 
     if (view_all)
     {
         std::cout << "All timers" << std::endl;
-        time_functions::get_all_time_remaining(timers);
+        timer_helpers::get_all_time_remaining(timers);
     }
 
     if (delete_timer != "")
