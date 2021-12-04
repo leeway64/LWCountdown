@@ -1,9 +1,10 @@
-#include <CLI/CLI.hpp>
-#include <nlohmann/json.hpp>
-#include "timer_helpers.hpp"
-
 #include <regex>
 #include <iostream>
+
+#include <CLI/CLI.hpp>
+#include <nlohmann/json.hpp>
+
+#include "timer_helpers.hpp"
 
 
 int main(int argc, char** argv) {
