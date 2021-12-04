@@ -1,5 +1,7 @@
 # LWCountdown
 
+![LWCountdown logo](LWCountdown.png)
+
 LWCountdown is a CLI (command-line interface) that can create multiple countdown
 timers and display the time remaining.
 
@@ -7,12 +9,13 @@ timers and display the time remaining.
 
 The easiest way to get LWCountdown is to download the pre-built binary from the [releases]() page.
 
-Alternatively, you can clone this repository and build the binary on your own machine.
+Alternatively, you can clone this repository and build the binary on your own machine. The binary
+will be built into the `\out\build\x64-Debug` folder.
 
 
 ## Usage
 
-The following is a brief example on how to use LWCountdown.
+The following is a brief overview on how to use LWCountdown.
 
 ```C++
 
