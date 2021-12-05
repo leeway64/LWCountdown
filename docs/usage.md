@@ -30,20 +30,48 @@ Options:
 
 ## Creating/updating a Timer
 
-```C++
+```
+$ LWCountdown -c "Independence Day"
+
+Name of timer: Independence Day
+    End date: 2022-7-4
+Timer "Independence Day" has been set
+    Time remaining: 211 days
+	
+$ LWCountdown -c "Christmas Day"
+
+Name of timer: Christmas Day
+    End date: 2021-12-25
+Timer "Christmas Day" has been set
+    Time remaining: 20 days
 ```
 
 ## Viewing a Timer
 
-```C++
+```
+$ LWCountdown -v "Christmas Day"
+
+Timer selected: Christmas Day
+    Time remaining: 20 days
 ```
 
 ## Viewing all Timers
 
-```C++
+```
+$ LWCountdown -a
+
+Showing all timers
+
+Christmas Day
+    Time remaining: 20 days
+Independence Day
+    Time remaining: 211 days
 ```
 
 ## Deleting a Timer
 
-```C++
+```
+$ LWCountdown -d "Independence Day"
+
+Timer "Independence Day" has been deleted
 ```

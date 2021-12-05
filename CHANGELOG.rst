@@ -9,5 +9,10 @@ this project follows `semantic versioning <https://semver.org/>`_.
 Unreleased
 -----------
 
-[0.0.1] - 
+- None
+
+
+[1.0.0] - 2021-12-
 --------------------
+
+- First stable release
