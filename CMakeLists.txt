@@ -26,7 +26,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(json)
 
 
-add_executable (LWCountdown "scripts/main.cpp" "scripts/timer_helpers.hpp")
+add_executable (LWCountdown
+	"src/main.cpp" "src/timer_helpers.hpp" "src/LWFormatter.hpp" "src/LWFormatter.hpp")
+
 target_link_libraries(
 	LWCountdown
 	PRIVATE

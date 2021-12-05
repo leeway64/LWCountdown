@@ -5,6 +5,7 @@
 #include <nlohmann/json.hpp>
 
 #include "timer_helpers.hpp"
+#include "LWFormatter.hpp"
 
 
 int main(int argc, char** argv) {
@@ -25,6 +26,8 @@ int main(int argc, char** argv) {
     input.close();
 
     CLI::App app{ "LWCountdown" };
+
+    app.formatter(std::make_shared<LWFormatter>());  // Custom formatting for help message
 
     std::string create = "";
     app.add_option("-c", create, "Create/update a timer");

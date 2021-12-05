@@ -1,6 +1,6 @@
 # LWCountdown
 
-![LWCountdown logo](LWCountdown.png)
+![LWCountdown logo](LWCountdown.jpg)
 
 LWCountdown is a CLI (command-line interface) that can create multiple countdown
 timers and display the time remaining.
@@ -17,8 +17,16 @@ will be built into the `\out\build\x64-Debug` folder.
 
 The following is a brief overview on how to use LWCountdown.
 
-```C++
+```
+LWCountdown: C++ CLI countdown timer
+Usage: LWCountdown [OPTIONS]
 
+Options:
+  -h,--help                   Print this help message and exit
+  -c TEXT                     Create/update a timer
+  -v TEXT                     View a timer
+  -a                          View all timers
+  -d TEXT                     Delete a timer
 ```
 
 For more information on using LWCountdown, refer to [the usage examples](docs/usage.md).
