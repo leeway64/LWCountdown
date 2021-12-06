@@ -1,6 +1,10 @@
 cmake_minimum_required (VERSION 3.8)
 
-project ("LWCountdown" LANGUAGES CXX)
+project (
+	"LWCountdown"
+	LANGUAGES CXX
+	VERSION "1.0.0"
+	)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX20_STANDARD_COMPILE_OPTION "-std:c++latest")

@@ -3,10 +3,10 @@
 # Table of Contents
 
 1. [Introduction](#Introduction)
-2. [Creating/updating a timer](#Creating/updating a Timer)
-3. [Viewing a Timer](#Viewing a Timer)
-4. [Viewing all Timers](#Viewing all Timers)
-5. [Deleting a Timer](#Deleting a Timer)
+2. [Creating/updating a timer](#Creating/updating-a-Timer)
+3. [Viewing a Timer](#Viewing-a-Timer)
+5. [Viewing all Timers](#Viewing-all-Timers)
+7. [Deleting a Timer](#Deleting-a-Timer)
 
 ## Introduction
 

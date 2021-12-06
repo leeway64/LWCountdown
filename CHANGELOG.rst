@@ -12,7 +12,7 @@ Unreleased
 - None
 
 
-[1.0.0] - 2021-12-
+[1.0.0] - 2021-12-6
 --------------------
 
 - First stable release
