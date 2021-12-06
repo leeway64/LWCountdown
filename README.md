@@ -7,7 +7,8 @@ timers and display the time remaining.
 
 ## Installation
 
-The easiest way to get LWCountdown is to download the pre-built binary from the [releases]() page.
+The easiest way to get LWCountdown is to download the pre-built binary from the
+[releases](https://github.com/leeway64/LWCountdown/releases) page.
 
 Alternatively, you can clone this repository and build the binary on your own machine. The binary
 will be built into the `\out\build\x64-Debug` folder.
