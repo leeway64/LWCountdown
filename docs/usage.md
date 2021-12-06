@@ -17,6 +17,8 @@ You will now be able to use LWCountdown from your computer's terminal.
 If you see the help message, you are now ready to use LWCountdown.
 
 ```
+$ LWCountdown -h
+
 LWCountdown: C++ CLI countdown timer
 Usage: LWCountdown [OPTIONS]
 
