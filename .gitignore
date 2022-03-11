@@ -1,5 +1,6 @@
 # Executables
 out/
 
-# Visual Studio
-.vs/
+cmake-build-debug/
+
+.idea/

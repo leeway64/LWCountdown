@@ -37,8 +37,8 @@ For more information on using LWCountdown, refer to [the usage examples](docs/us
 The following third-party tools were used in LWCountdown; they were very helpful in making
 LWCountdown possible.
 
-- [json](https://github.com/nlohmann/json): json is a C++ JSON library.
+- [json](https://github.com/nlohmann/json) (MIT License): json is a C++ JSON library.
 
-- [CLI11](https://github.com/CLIUtils/CLI11): CLI11 provided the command line parsing.
+- [CLI11](https://github.com/CLIUtils/CLI11) (BSD-3-Clause): CLI11 provided the command line parsing.
 
-- [CMake](https://cmake.org/): CMake was used as the build system.
+- [CMake](https://cmake.org/) (BSD-3-Clause): CMake was used as the build system.
