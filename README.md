@@ -30,7 +30,7 @@ Options:
   -d TEXT                     Delete a timer
 ```
 
-For more information on using LWCountdown, refer to [the usage examples](docs/usage.md).
+For more information on using LWCountdown, refer to [the usage examples](docs/README.md).
 
 ## Third-party Tools
 
