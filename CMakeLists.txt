@@ -11,6 +11,10 @@ set(CMAKE_CXX20_STANDARD_COMPILE_OPTION "-std:c++latest")
 set(CMAKE_CXX20_EXTENSION_COMPILE_OPTION "-std:c++latest")
 
 
+# Put the exe into the bin folder
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+
 include(FetchContent)
 
 FetchContent_Declare(

@@ -11,7 +11,7 @@ The easiest way to get LWCountdown is to download the pre-built binary from the
 [releases](https://github.com/leeway64/LWCountdown/releases) page.
 
 Alternatively, you can clone this repository and build the binary on your own machine. The binary
-will be built into the `\out\build\x64-Debug` folder.
+will be built into the `bin` folder.
 
 
 ## Usage
@@ -34,11 +34,6 @@ For more information on using LWCountdown, refer to [the usage examples](docs/RE
 
 ## Third-party Tools
 
-The following third-party tools were used in LWCountdown; they were very helpful in making
-LWCountdown possible.
-
-- [json](https://github.com/nlohmann/json) (MIT License): json is a C++ JSON library.
-
-- [CLI11](https://github.com/CLIUtils/CLI11) (BSD-3-Clause): CLI11 provided the command line parsing.
-
-- [CMake](https://cmake.org/) (BSD-3-Clause): CMake was used as the build system.
+- [json](https://github.com/nlohmann/json) (MIT License): C++ JSON library.
+- [CLI11](https://github.com/CLIUtils/CLI11) (BSD-3-Clause): Command-line parsing.
+- [CMake](https://cmake.org/) (BSD-3-Clause): Build system generator.
