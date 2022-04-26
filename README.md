@@ -1,6 +1,6 @@
 # LWCountdown
 
-![LWCountdown logo](docs/LWCountdown.jpg)
+![LWCountdown logo](docs/images/LWCountdown.svg)
 
 LWCountdown is a CLI (command-line interface) that can create multiple countdown
 timers and display the time remaining.
@@ -11,7 +11,7 @@ The easiest way to get LWCountdown is to download the pre-built binary from the
 [releases](https://github.com/leeway64/LWCountdown/releases) page.
 
 Alternatively, you can clone this repository and build the binary on your own machine. The binary
-will be built into the `bin` folder.
+will be built into the [`bin`](bin) folder.
 
 
 ## Usage
@@ -37,3 +37,5 @@ For more information on using LWCountdown, refer to [the usage examples](docs/RE
 - [json](https://github.com/nlohmann/json) (MIT License): C++ JSON library.
 - [CLI11](https://github.com/CLIUtils/CLI11) (BSD-3-Clause): Command-line parsing.
 - [CMake](https://cmake.org/) (BSD-3-Clause): Build system generator.
+- [Vega](https://github.com/vega/vega) (BSD-3-Clause): Visualization grammar. Used to create the LWCountdown logo.
+  Check out the [online Vega editor](https://vega.github.io/editor/).
