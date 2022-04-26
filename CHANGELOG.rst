@@ -11,6 +11,12 @@ Unreleased
 
 - None
 
+[1.0.1] - 2022-4-25
+--------------------
+
+- Add editorconfig and gitattributes
+- Use Vega to draw logo
+
 
 [1.0.0] - 2021-12-6
 --------------------
