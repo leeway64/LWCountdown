@@ -1,6 +1,6 @@
 # LWCountdown
 
-![LWCountdown logo](docs/images/LWCountdown.svg)
+![LWCountdown logo](docs/images/LWCountdown_Excalidraw.svg)
 
 LWCountdown is a CLI (command-line interface) that can create multiple countdown
 timers and display the time remaining.
