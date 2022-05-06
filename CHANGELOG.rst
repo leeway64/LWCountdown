@@ -11,8 +11,20 @@ Unreleased
 
 - None
 
+[1.0.2] - 2022-5-6
+--------------------
+
+Added
+~~~~~~
+
+- Use Excalidraw to create logo
+- Make small formatting changes to code
+
 [1.0.1] - 2022-4-25
 --------------------
+
+Added
+~~~~~~
 
 - Add editorconfig and gitattributes
 - Use Vega to draw logo

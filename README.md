@@ -37,5 +37,6 @@ For more information on using LWCountdown, refer to [the usage examples](docs/RE
 - [json](https://github.com/nlohmann/json) (MIT License): C++ JSON library.
 - [CLI11](https://github.com/CLIUtils/CLI11) (BSD-3-Clause): Command-line parsing.
 - [CMake](https://cmake.org/) (BSD-3-Clause): Build system generator.
-- [Vega](https://github.com/vega/vega) (BSD-3-Clause): Visualization grammar. Used to create the LWCountdown logo.
-  Check out the [online Vega editor](https://vega.github.io/editor/).
+- [Excalidraw](https://github.com/excalidraw/excalidraw) (MIT License): Tool for creating diagrams
+  in a hand-drawn style. Used to create the LWCountdown logo. Check out the
+  [online Excalidraw editor](https://excalidraw.com/).

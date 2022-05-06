@@ -1,6 +1,10 @@
 # Executables
 *.exe
 
-cmake-build-debug/
+# Build folders
+cmake-build-*/
 
+# CLion IDE settings
 .idea/
+
+*.json

@@ -51,21 +51,21 @@ int main(int argc, char** argv) {
 
     if (create != "")
     {
-        std::string end_time{};
+        std::string end_date{};
         std::cout << "Name of timer: " << create << std::endl;
         std::cout << "    End date: ";
-        std::cin >> end_time;
+        std::cin >> end_date;
        
         const std::regex re("[\\d]{4}-[\\d]{2}-[\\d]{2}|[\\d]{4}-[\\d]{1}-[\\d]{1}");
-        if (!std::regex_match(end_time, re))
+        if (!std::regex_match(end_date, re))
         {
             std::cout << "\nIncorrect date format" << std::endl;
             std::cout << "Date must be in the form of YYYY-MM-DD or YYYY-M-D" << std::endl;
         }
         else {
             std::cout << "Timer \"" << create << "\" has been set" << std::endl;
-            timers[create] = end_time;
-            timer_helpers::print_time_remaining(end_time);
+            timers[create] = end_date;
+            timer_helpers::print_time_remaining(end_date);
         }
     }
 
@@ -75,6 +75,7 @@ int main(int argc, char** argv) {
         if (end_time_string == nullptr)
         {
             std::cout << "Timer \"" << view << "\" not found" << std::endl;
+            // Need to erase, since querying a key automatically creates one if it doesn't exist
             timers.erase(view);
         }
         else

@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="870" height="293" viewBox="0 0 870 293"><g fill="none" stroke-miterlimit="10" transform="translate(0,0)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h800v100h-800Z"/><g><g class="mark-text role-mark" role="graphics-object" aria-roledescription="text mark container"><text text-anchor="middle" transform="translate(466,270)" font-family="Algerian" font-size="116px" font-style="normal" font-weight="300" fill="#0000ff" fill-opacity="1">LWCOUNTDOWN</text></g></g><path class="foreground" aria-hidden="true" d="" display="none"/></g></g></g></svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249 65" width="747" height="195">
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="249" height="65" fill="#ffffff"></rect><g transform="translate(10 10) rotate(0 114.5 22.5)"><text x="114.5" y="32" font-family="Virgil, Segoe UI Emoji" font-size="36px" fill="#364fc7" text-anchor="middle" style="white-space: pre;" direction="ltr">LWCountdown</text></g></svg>
