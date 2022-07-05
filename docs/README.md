@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Once you have downloaded/built the LWCountdown executable, add LWCountdown to your machine's path.
+Once you have built the LWCountdown executable, add LWCountdown to your machine's path.
 
 You will now be able to use LWCountdown from your computer's terminal.
 

@@ -35,7 +35,10 @@ FetchContent_MakeAvailable(json)
 
 
 add_executable (LWCountdown
-	"src/main.cpp" "src/timer_helpers.hpp" "src/LWFormatter.hpp" "src/LWFormatter.hpp")
+	            "src/main.cpp"
+                "src/timer_helpers.hpp"
+                "src/LWFormatter.hpp"
+                "src/LWFormatter.hpp")
 
 target_link_libraries(
 	LWCountdown
