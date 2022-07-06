@@ -1,20 +1,25 @@
 # Usage Examples
 
 # Table of Contents
-
 1. [Introduction](#Introduction)
 2. [Creating/updating a timer](#Creating/updating-a-Timer)
 3. [Viewing a Timer](#Viewing-a-Timer)
 4. [Viewing all Timers](#Viewing-all-Timers)
 5. [Deleting a Timer](#Deleting-a-Timer)
 
+
 ## Introduction
+Build LWCountdown by running the following commands:
 
-Once you have built the LWCountdown executable, add LWCountdown to your machine's path.
+```shell
+git clone https://github.com/leeway64/LWCountdown.git
+cd LWCountdown
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release
+cmake --build ./cmake-build-release --target LWCountdown
+cd bin
+```
 
-You will now be able to use LWCountdown from your computer's terminal.
-
-If you see the help message, you are now ready to use LWCountdown.
+If you see the following help message, you are now ready to use LWCountdown.
 
 ```
 $ LWCountdown -h
@@ -30,8 +35,8 @@ Options:
   -d TEXT                     Delete a timer
 ```
 
-## Creating/updating a Timer
 
+## Creating/updating a Timer
 ```
 $ LWCountdown -c "Independence Day"
 
@@ -48,8 +53,8 @@ Timer "Christmas Day" has been set
     Time remaining: 20 days
 ```
 
-## Viewing a Timer
 
+## Viewing a Timer
 ```
 $ LWCountdown -v "Christmas Day"
 
@@ -57,8 +62,8 @@ Timer selected: Christmas Day
     Time remaining: 20 days
 ```
 
-## Viewing all Timers
 
+## Viewing all Timers
 ```
 $ LWCountdown -a
 
@@ -70,8 +75,8 @@ Independence Day
     Time remaining: 211 days
 ```
 
-## Deleting a Timer
 
+## Deleting a Timer
 ```
 $ LWCountdown -d "Independence Day"
 
