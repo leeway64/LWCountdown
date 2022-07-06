@@ -2,14 +2,16 @@
 
 === Introduction ===
 CMake is a [https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html#new-project meta build system]
-that manages [https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b the build process in an operating system-independent and compiler-independent way].
+that [https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b manages the build process] in
+an operating system-independent and compiler-independent way.
 
 [https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html#new-project CMakeLists.txt files]
-can generate build files for a specific environment/OS. [https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b
-For example], CMake creates Makefiles on Unix-based machines and creates projects on Windows machines.
-This is why CMake is referred to as a meta build system.
+can generate build files for a specific environment/OS.
+[https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b For example], CMake creates Makefiles
+on Unix-based machines and creates projects on Windows machines. This is why CMake is referred to
+as a meta build system.
 
-Let's refer to the CMake commands shown in the [../README.md README]:
+Let's refer to the CMake commands shown in the [[../README.md|README]]:
 
 <code> cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release</code>
 
