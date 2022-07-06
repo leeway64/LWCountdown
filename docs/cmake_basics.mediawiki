@@ -12,25 +12,21 @@ This is why CMake is referred to as a meta build system.
 
 Let's refer to the CMake commands shown in the [../README.md README]:
 
-{{code|inline=y|lang=bash|
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release
-cmake --build ./cmake-build-release --target LWCountdown
-}}
-
+<code> cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release</code>
+<code>cmake --build ./cmake-build-release --target LWCountdown</code>
 
 === Configuration ===
-{{code|inline=y|lang=bash|
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release
-}}
+<code> cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release</code>
 
 The configuration step generates the native build system (e.g.: make).
 
 
 === Build ===
-{{code|inline=y|lang=bash|
-cmake --build ./cmake-build-release --target LWCountdown
-}}
+<code>cmake --build ./cmake-build-release --target LWCountdown</code>
+
 
 The build step calls the build system to compile or link the project.
 
-https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html#build-and-run
+Refer to
+[https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html#build-and-run this CMake tutorial page]
+for more information on configuration and building.
