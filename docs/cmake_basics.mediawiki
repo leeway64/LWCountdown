@@ -1,1 +1,36 @@
 == CMake Basics ==
+
+=== Introduction ===
+
+CMake is a meta build system (https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html#new-project)
+that manages the build process in an operating system-independent and compiler-independent way
+(https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b).
+
+CMakeLists.txt files can generate build files for a specific environment/OS (https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html#new-project).
+For example, CMake creates Makefiles on Unix-based machines and creates projects on Windows machines (https://medium.com/@onur.dundar1/cmake-tutorial-585dd180109b).
+This is why CMake is referred to as a meta build system.
+
+Let's refer to the CMake commands shown in the [../README.md README]:
+
+{{code|inline=y|lang=bash|
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release
+cmake --build ./cmake-build-release --target LWCountdown
+}}
+
+
+=== Configuration ===
+{{code|inline=y|lang=bash|
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release
+}}
+
+The configuration step generates the native build system (e.g.: make).
+
+
+=== Build ===
+{{code|inline=y|lang=bash|
+cmake --build ./cmake-build-release --target LWCountdown
+}}
+
+The build step calls the build system to compile or link the project.
+
+https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html#build-and-run

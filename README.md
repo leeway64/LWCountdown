@@ -14,7 +14,7 @@ cmake --build ./cmake-build-release --target LWCountdown
 ```
 The LWCountdown binary will be built into the [`bin`](bin) folder.
 
-Refer to [this page](docs/cmake_basics.mediawiki) for more information on how CMake works.
+Refer to [this page](docs/cmake_basics.mediawiki) for more information on CMake.
 
 
 ## Usage
