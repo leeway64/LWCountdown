@@ -12,12 +12,15 @@ Unreleased
 - None
 
 
-[1.0.3] - 2022-7-
+[1.0.3] - 2022-7-6
+--------------------
 
 Added
 ~~~~~~
 
-
+- A file explaining the basics of CMake
+- LWCountdown installation commands
+- Github badges for license and version
 
 
 [1.0.2] - 2022-5-6

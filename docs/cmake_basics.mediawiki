@@ -27,7 +27,8 @@ The configuration step generates the native build system (e.g.: make).
 === Build ===
 <code>cmake --build ./cmake-build-release --target LWCountdown</code>
 
-The build step calls the build system to compile or link the project.
+The build step calls the build system to compile or link the project. This step is when the
+executable is created.
 
 Refer to
 [https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html#build-and-run this CMake tutorial page]
