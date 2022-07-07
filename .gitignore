@@ -1,5 +1,7 @@
 # Executables
-*.exe
+bin/
+# Ignore all files in bin folder except for .gitkeep
+!bin/.gitkeep
 
 # Build folders
 cmake-build-*/
